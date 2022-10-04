@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 :root {
   /* Increase or decrease the number 
     to change the vertical spacing globally*/
@@ -12,6 +12,7 @@
   --vspace-3: calc(0.5 * var(--space) * 1rem);
   /* Font Families */
   --Raleway: "Raleway";
+  --Oswald: "Oswald";
   /* Colours */
   --Colour-bg-main: #14171b;
   --Colour-font-main: #e3e7dd;
@@ -37,6 +38,7 @@ body {
 
 ul {
   list-style: none;
+  display: flex;
 }
 
 a {
@@ -164,7 +166,7 @@ sup {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
 }
 
-.icon-google {
+.icon {
   font-size: inherit;
   color: inherit;
 }
@@ -190,6 +192,12 @@ sup {
 .link {
   font-weight: 300;
   text-transform: capitalize;
+}
+
+.logo {
+  margin: 0;
+  text-transform: uppercase;
+  color: var(--Colour-font-accent);
 }
 
 main {
@@ -300,10 +308,63 @@ main header ul.list-dropdown li.list-item-active::before {
 }
 
 aside {
+  display: none;
   position: absolute;
-  width: 33vw;
+  width: 300px;
   height: 100vh;
   top: 0;
-  right: -33vw;
+  right: 0;
+  padding: var(--vspace-2);
   background-color: #14171b;
+  font-family: var(--Raleway);
+  color: var(--Colour-font-main);
+}
+aside h1,
+aside h2,
+aside h3,
+aside h4,
+aside h5,
+aside h6 {
+  color: var(--Colour-font-accent);
+  font-family: var(--Oswald);
+  font-weight: 300;
+}
+aside a.link-logo {
+  font-weight: 800;
+}
+aside p.about {
+  width: 30ch;
+}
+aside article.group ul {
+  display: flex;
+  gap: var(--vspace-3);
+  flex-direction: column;
+  list-style: circle;
+  list-style-position: inside;
+}
+aside button.button-toggle {
+  position: absolute;
+  top: var(--vspace-3);
+  right: var(--vspace-3);
+  font-size: 2rem;
+}
+aside span.social {
+  display: flex;
+  align-items: baseline;
+  gap: var(--vspace-3);
+}
+aside span.social h3 {
+  display: flex;
+  align-items: flex-end;
+}
+aside span.social span {
+  height: 1.25rem;
+  width: 1.25rem;
+}
+aside span.social span svg {
+  height: 100%;
+  width: 100%;
+}
+aside span.social span svg path {
+  fill: var(--Colour-font-accent);
 }/*# sourceMappingURL=index.css.map */

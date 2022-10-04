@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 //--- Start of Variables ---//
 :root {
   /* Increase or decrease the number 
@@ -16,6 +16,7 @@
 
   /* Font Families */
   --Raleway: "Raleway";
+  --Oswald: "Oswald";
 
   /* Colours */
   --Colour-bg-main: #14171b;
@@ -56,6 +57,7 @@ body {
 
 ul {
   list-style: none;
+  display: flex;
 }
 
 a {
@@ -191,11 +193,15 @@ sup {
 //--- End of Google Icons ---//
 
 //--- Custom Classes ---//
-
-.icon-google {
+.icon {
   font-size: inherit;
   color: inherit;
 }
+
+// .icon-google {
+//   font-size: inherit;
+//   color: inherit;
+// }
 
 .center {
   display: grid;
@@ -216,12 +222,16 @@ sup {
   font-weight: 300;
   text-transform: capitalize;
 }
-
+.logo {
+  margin: 0;
+  text-transform: uppercase;
+  color: var(--Colour-font-accent);
+}
 ////////////////////////////////////////////////////
 main {
   width: 100%;
   position: absolute;
-  //   left: -33vw;
+  //   left: -300px;
   header {
     width: 100%;
 
@@ -331,10 +341,73 @@ main {
 }
 
 aside {
+  display: none;
   position: absolute;
-  width: 33vw;
+  width: 300px;
   height: 100vh;
   top: 0;
-  right: -33vw;
+  right: 0;
+  //   right: -33vw;
+  padding: var(--vspace-2);
   background-color: #14171b;
+  font-family: var(--Raleway);
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--Colour-font-accent);
+    font-family: var(--Oswald);
+    font-weight: 300;
+    // letter-spacing: 1px;
+  }
+  color: var(--Colour-font-main);
+  a.link-logo {
+    font-weight: 800;
+  }
+  p.about {
+    width: 30ch;
+  }
+  address.address {
+  }
+  article.group {
+    ul {
+      display: flex;
+      gap: var(--vspace-3);
+
+      flex-direction: column;
+      list-style: circle;
+      list-style-position: inside;
+      li {
+      }
+    }
+  }
+  button.button-toggle {
+    position: absolute;
+    top: var(--vspace-3);
+    right: var(--vspace-3);
+    font-size: 2rem;
+  }
+
+  span.social {
+    display: flex;
+    align-items: baseline;
+    gap: var(--vspace-3);
+    h3 {
+      display: flex;
+      align-items: flex-end;
+    }
+    span {
+      height: 1.25rem;
+      width: 1.25rem;
+      svg {
+        height: 100%;
+        width: 100%;
+        path {
+          fill: var(--Colour-font-accent);
+        }
+      }
+    }
+  }
 }
