@@ -32,6 +32,7 @@ html {
 body {
   font-size: 1em;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 ul {
@@ -191,57 +192,67 @@ sup {
   text-transform: capitalize;
 }
 
-header {
+main {
+  width: 100%;
+  position: absolute;
+}
+main header {
+  width: 100%;
   background-color: black;
   padding: 0 var(--vspace-2);
   font-family: var(--Raleway);
 }
-header.dropdownActive ul.list-dropdown {
+main header.dropdownActive ul.list-dropdown {
   height: auto;
 }
-header nav.navigation {
+main header nav.navigation {
   margin: 0 auto;
   color: var(--Colour-font-accent);
   padding: var(--vspace-2) 0;
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-areas: "a b" "c c";
-  align-items: center;
 }
 @media (min-width: 700px) {
-  header nav.navigation {
+  main header nav.navigation {
+    align-items: center;
     width: 100%;
     grid-template-columns: auto 1fr auto;
     grid-template-areas: "b c a";
   }
 }
-@media (min-width: 700px) {
-  header nav.navigation {
-    width: 100%;
-    grid-template-columns: auto 1fr auto;
-    grid-template-areas: "b c a";
-  }
-}
-header nav.navigation button.button-toggle {
+main header nav.navigation button.button-toggle {
+  justify-self: end;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   grid-area: a;
 }
+main header nav.navigation button.button-toggle__sidebar {
+  display: none;
+}
 @media (min-width: 700px) {
-  header nav.navigation button.button-toggle {
-    justify-self: end;
+  main header nav.navigation button.button-toggle__sidebar {
+    display: grid;
   }
 }
-header nav.navigation a.link-logo {
+main header nav.navigation button.button-toggle__navigation {
+  display: grid;
+}
+@media (min-width: 700px) {
+  main header nav.navigation button.button-toggle__navigation {
+    display: none;
+  }
+}
+main header nav.navigation a.link-logo {
   grid-area: b;
   justify-self: center;
 }
-header nav.navigation a.link-logo h4.logo {
+main header nav.navigation a.link-logo h4.logo {
   margin: 0;
   text-transform: uppercase;
 }
-header ul.list-dropdown {
+main header ul.list-dropdown {
   grid-area: c;
   height: 0;
   overflow: hidden;
@@ -249,13 +260,13 @@ header ul.list-dropdown {
   font-family: inherit;
 }
 @media (min-width: 700px) {
-  header ul.list-dropdown {
+  main header ul.list-dropdown {
     height: auto;
     flex-direction: row;
     justify-self: center;
   }
 }
-header ul.list-dropdown li.list-item-navigation {
+main header ul.list-dropdown li.list-item-navigation {
   padding: var(--vspace-3);
   padding-left: 0;
   display: flex;
@@ -264,26 +275,35 @@ header ul.list-dropdown li.list-item-navigation {
   border-bottom: 1px solid var(--Colour-font-deemphasized);
 }
 @media (min-width: 700px) {
-  header ul.list-dropdown li.list-item-navigation {
+  main header ul.list-dropdown li.list-item-navigation {
     border: none;
   }
-  header ul.list-dropdown li.list-item-navigation a.link {
+  main header ul.list-dropdown li.list-item-navigation a.link {
     font-weight: 500;
     text-transform: uppercase;
     z-index: 1;
   }
-  header ul.list-dropdown li.list-item-navigation span.icon {
+  main header ul.list-dropdown li.list-item-navigation span.icon {
     display: none;
   }
 }
-header ul.list-dropdown li.list-item-active {
+main header ul.list-dropdown li.list-item-active {
   position: relative;
 }
-header ul.list-dropdown li.list-item-active::before {
+main header ul.list-dropdown li.list-item-active::before {
   content: "";
   position: absolute;
   height: 100%;
   width: 100%;
   background-color: #9267be;
   z-index: 0;
+}
+
+aside {
+  position: absolute;
+  width: 33vw;
+  height: 100vh;
+  top: 0;
+  right: -33vw;
+  background-color: #14171b;
 }/*# sourceMappingURL=index.css.map */
