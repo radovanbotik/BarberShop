@@ -27,6 +27,12 @@
 
 //--- Start of Mixins --- //
 
+@mixin desktop {
+  @media (min-width: 700px) {
+    @content;
+  }
+}
+
 //--- End of Mixins ---//
 
 //--- Start of General Styles ---//
@@ -214,46 +220,67 @@ sup {
 
 header {
   &.dropdownActive {
-    ul.navigation-dropdown {
+    ul.list-dropdown {
       height: auto;
     }
   }
-  background-color: black;
-  padding: 0 var(--vspace-0);
-  font-family: var(--Raleway);
-  nav.navigation {
-    // max-width: calc(25 * var(--vspace));
 
+  background-color: black;
+  padding: 0 var(--vspace-2);
+  font-family: var(--Raleway);
+
+  nav.navigation {
+    @include desktop() {
+      width: 100%;
+      grid-template-columns: auto 1fr auto;
+      grid-template-areas: "b c a";
+    }
     margin: 0 auto;
     color: var(--Colour-font-accent);
+    padding: var(--vspace-2) 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      "a b"
+      "c c";
+    align-items: center;
+    @include desktop() {
+      width: 100%;
+      grid-template-columns: auto 1fr auto;
+      grid-template-areas: "b c a";
+    }
 
-    div.control-group {
-      padding: var(--vspace-2) 0;
-      display: grid;
-      grid-template-columns: auto 1fr;
-      align-items: center;
-
-      button.button-toggle {
-        appearance: none;
-        grid-column: 1/2;
-        grid-row: 1;
+    button.button-toggle {
+      @include desktop() {
+        justify-self: end;
       }
-      a.link-logo {
-        grid-column: 1/3;
-        grid-row: 1;
-        justify-self: center;
-        h4.logo {
-          margin: 0;
-          text-transform: uppercase;
-        }
+      appearance: none;
+      grid-area: a;
+    }
+    a.link-logo {
+      @include desktop() {
+      }
+      grid-area: b;
+      justify-self: center;
+      h4.logo {
+        margin: 0;
+        text-transform: uppercase;
       }
     }
   }
-  ul.navigation-dropdown {
+  ul.list-dropdown {
+    @include desktop() {
+      height: auto;
+      flex-direction: row;
+      justify-self: center;
+    }
+    grid-area: c;
+    // grid-column: 1/3;
     height: 0;
     overflow: hidden;
     color: var(--Colour-font-main);
     font-family: inherit;
+
     li.list-item-navigation {
       padding: var(--vspace-3);
       padding-left: 0;
@@ -261,6 +288,29 @@ header {
       align-items: center;
       justify-content: space-between;
       border-bottom: 1px solid var(--Colour-font-deemphasized);
+
+      @include desktop() {
+        border: none;
+        a.link {
+          font-weight: 500;
+          text-transform: uppercase;
+          z-index: 1;
+        }
+        span.icon {
+          display: none;
+        }
+      }
+    }
+    li.list-item-active {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: #9267be;
+        z-index: 0;
+      }
     }
   }
 }
