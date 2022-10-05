@@ -18,6 +18,8 @@
   --Colour-font-main: #e3e7dd;
   --Colour-font-deemphasized: #e3e7dd94;
   --Colour-font-accent: #9267be;
+  /* Transitions */
+  --transition-250ms: all 250ms ease-in;
 }
 
 * {
@@ -32,10 +34,13 @@ html {
 
 body {
   font-size: 1em;
-  margin: 0 auto;
-  overflow: hidden;
 }
-
+body.sidebarActive aside.sidebar {
+  display: block;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  z-index: 100;
+}
 ul {
   list-style: none;
   display: flex;
@@ -202,13 +207,22 @@ sup {
 
 main {
   width: 100%;
-  position: absolute;
+  position: relative;
+  transition: var(--transition-250ms);
 }
 main header {
+  z-index: 2;
   width: 100%;
   background-color: black;
   padding: 0 var(--vspace-2);
   font-family: var(--Raleway);
+}
+@media (min-width: 700px) {
+  main header {
+    color: var(--Colour-bg-main);
+    background-color: transparent;
+    position: absolute;
+  }
 }
 main header.dropdownActive ul.list-dropdown {
   height: auto;
@@ -227,6 +241,7 @@ main header nav.navigation {
     width: 100%;
     grid-template-columns: auto 1fr auto;
     grid-template-areas: "b c a";
+    color: black;
   }
 }
 main header nav.navigation button.button-toggle {
@@ -257,6 +272,7 @@ main header nav.navigation a.link-logo {
   justify-self: center;
 }
 main header nav.navigation a.link-logo h4.logo {
+  color: inherit;
   margin: 0;
   text-transform: uppercase;
 }
@@ -272,6 +288,7 @@ main header ul.list-dropdown {
     height: auto;
     flex-direction: row;
     justify-self: center;
+    color: black;
   }
 }
 main header ul.list-dropdown li.list-item-navigation {
@@ -306,65 +323,95 @@ main header ul.list-dropdown li.list-item-active::before {
   background-color: #9267be;
   z-index: 0;
 }
+main section.section-hero {
+  height: 100vh;
+  width: 100%;
+}
+main section.section-hero .slider-hero {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+main section.section-hero .slider-hero img {
+  position: absolute;
+  filter: grayscale(100%);
+}
+main section.section-hero .slider-hero button.button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+}
+main section.section-hero .slider-hero button.button__previous {
+  left: 0;
+  transform: translateY(-50%);
+}
+main section.section-hero .slider-hero button.button__next {
+  right: 0;
+}
 
-aside {
-  display: none;
+aside.sidebar {
   position: absolute;
   width: 300px;
-  height: 100vh;
+  height: 100%;
+  -webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+          clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
   top: 0;
   right: 0;
+  z-index: 0;
   padding: var(--vspace-2);
   background-color: #14171b;
   font-family: var(--Raleway);
+  transition: var(--transition-250ms);
   color: var(--Colour-font-main);
 }
-aside h1,
-aside h2,
-aside h3,
-aside h4,
-aside h5,
-aside h6 {
+aside.sidebar h1,
+aside.sidebar h2,
+aside.sidebar h3,
+aside.sidebar h4,
+aside.sidebar h5,
+aside.sidebar h6 {
   color: var(--Colour-font-accent);
   font-family: var(--Oswald);
   font-weight: 300;
 }
-aside a.link-logo {
+aside.sidebar a.link-logo {
   font-weight: 800;
 }
-aside p.about {
+aside.sidebar p.about {
   width: 30ch;
 }
-aside article.group ul {
+aside.sidebar article.group ul {
   display: flex;
   gap: var(--vspace-3);
   flex-direction: column;
   list-style: circle;
   list-style-position: inside;
 }
-aside button.button-toggle {
+aside.sidebar button.button-toggle {
   position: absolute;
-  top: var(--vspace-3);
-  right: var(--vspace-3);
+  top: 1.5rem;
+  right: 1.5rem;
   font-size: 2rem;
 }
-aside span.social {
+aside.sidebar span.social {
   display: flex;
   align-items: baseline;
   gap: var(--vspace-3);
 }
-aside span.social h3 {
+aside.sidebar span.social h3 {
   display: flex;
   align-items: flex-end;
 }
-aside span.social span {
+aside.sidebar span.social span {
   height: 1.25rem;
   width: 1.25rem;
 }
-aside span.social span svg {
+aside.sidebar span.social span svg {
   height: 100%;
   width: 100%;
 }
-aside span.social span svg path {
+aside.sidebar span.social span svg path {
   fill: var(--Colour-font-accent);
 }/*# sourceMappingURL=index.css.map */

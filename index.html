@@ -26,7 +26,7 @@
           </button>
           <button
             class="button button-toggle center button-toggle__sidebar"
-            id="toggle-sidebar"
+            id="open-sidebar"
           >
             <span class="material-symbols-outlined icon icon-google">
               menu
@@ -70,6 +70,34 @@
           </ul>
         </nav>
       </header>
+      <section class="section section-hero" id="hero-slider">
+        <div class="slider slider-hero">
+          <img
+            src="./assets/heros/hero-1.jpg"
+            alt=""
+            id="hero-image1"
+            data-id="slide-image"
+          />
+          <img
+            src="./assets/heros/hero-2.jpg"
+            alt=""
+            id="hero-image2"
+            data-id="slide-image"
+          />
+          <img
+            src="./assets/heros/hero-3.jpg"
+            alt=""
+            id="hero-image3"
+            data-id="slide-image"
+          />
+          <button class="button button__previous" id="slider-previous">
+            <span class="material-symbols-outlined icon"> west </span>
+          </button>
+          <button class="button button__next" id="slider-next">
+            <span class="material-symbols-outlined icon"> east </span>
+          </button>
+        </div>
+      </section>
     </main>
     <aside class="sidebar" id="sidebar">
       <a href="index.html" class="link link-logo">
@@ -261,7 +289,9 @@
         </span>
       </span>
 
-      <button class="button button-toggle center" id="close-sidebar">x</button>
+      <button class="button button-toggle center" id="close-sidebar">
+        <span class="material-symbols-outlined icon"> close </span>
+      </button>
     </aside>
   </body>
 </html>
