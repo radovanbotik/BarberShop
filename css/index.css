@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Oswald:wght@200;300;400;500;600;700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 :root {
   /* Increase or decrease the number 
     to change the vertical spacing globally*/
@@ -13,6 +13,7 @@
   /* Font Families */
   --Raleway: "Raleway";
   --Oswald: "Oswald";
+  --Libre-Baskerville: "Libre Baskerville";
   /* Colours */
   --Colour-bg-main: #14171b;
   --Colour-font-main: #e3e7dd;
@@ -202,7 +203,7 @@ sup {
 .logo {
   margin: 0;
   text-transform: uppercase;
-  color: var(--Colour-font-accent);
+  color: var(--Colour-font-main);
 }
 
 main {
@@ -211,6 +212,7 @@ main {
   transition: var(--transition-250ms);
 }
 main header {
+  position: absolute;
   z-index: 2;
   width: 100%;
   background-color: black;
@@ -229,7 +231,7 @@ main header.dropdownActive ul.list-dropdown {
 }
 main header nav.navigation {
   margin: 0 auto;
-  color: var(--Colour-font-accent);
+  color: var(--Colour-font-main);
   padding: var(--vspace-2) 0;
   display: grid;
   grid-template-columns: auto 1fr;
@@ -336,6 +338,7 @@ main section.section-hero .slider-hero {
 main section.section-hero .slider-hero img {
   position: absolute;
   filter: grayscale(100%);
+  transition: var(--transition-250ms);
 }
 main section.section-hero .slider-hero button.button {
   position: absolute;
@@ -350,6 +353,79 @@ main section.section-hero .slider-hero button.button__previous {
 }
 main section.section-hero .slider-hero button.button__next {
   right: 0;
+}
+main section.section-story div.control-group {
+  padding: 0 var(--vspace-1);
+  display: flex;
+  flex-direction: column;
+  -moz-column-gap: var(--vspace-3);
+       column-gap: var(--vspace-3);
+}
+main section.section-story div.control-group h2 {
+  font-weight: 400;
+  font-family: var(--Oswald);
+  text-transform: uppercase;
+  text-align: center;
+}
+main section.section-story div.control-group blockquote {
+  align-self: center;
+  text-align: center;
+  font-family: var(--Libre-Baskerville);
+  width: 50ch;
+}
+main section.section-story div.control-group div.cards-group {
+  display: flex;
+  place-content: center;
+  flex-wrap: wrap;
+  gap: var(--vspace-3);
+}
+main section.section-story div.control-group div.cards-group article.card {
+  min-width: 240px;
+  max-width: 420px;
+  aspect-ratio: 3/2;
+  flex: 1;
+  display: grid;
+  place-content: center;
+  position: relative;
+  font-family: var(--Raleway);
+}
+main section.section-story div.control-group div.cards-group article.card div.control-group {
+  opacity: 0;
+  padding: var(--vspace-2);
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  z-index: 1;
+  transition: var(--transition-250ms);
+}
+main section.section-story div.control-group div.cards-group article.card div.control-group h5 {
+  font-style: italic;
+  margin: 0;
+}
+main section.section-story div.control-group div.cards-group article.card div.control-group button.button {
+  font-size: 1.5rem;
+}
+main section.section-story div.control-group div.cards-group article.card div.control-group h4 {
+  text-transform: uppercase;
+  margin: 0;
+}
+main section.section-story div.control-group div.cards-group article.card img {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: block;
+  filter: grayscale(100%);
+}
+main section.section-story div.control-group div.cards-group article.card:hover div.control-group {
+  opacity: 1;
+}
+main section.section-story div.control-group div.cards-group article.card:hover img {
+  opacity: 0.3;
+}
+main section.about {
+  display: none;
 }
 
 aside.sidebar {
@@ -373,12 +449,9 @@ aside.sidebar h3,
 aside.sidebar h4,
 aside.sidebar h5,
 aside.sidebar h6 {
-  color: var(--Colour-font-accent);
+  color: var(--Colour-font-main);
   font-family: var(--Oswald);
   font-weight: 300;
-}
-aside.sidebar a.link-logo {
-  font-weight: 800;
 }
 aside.sidebar p.about {
   width: 30ch;
@@ -414,5 +487,5 @@ aside.sidebar span.social span svg {
   width: 100%;
 }
 aside.sidebar span.social span svg path {
-  fill: var(--Colour-font-accent);
+  fill: var(--Colour-font-main);
 }/*# sourceMappingURL=index.css.map */
