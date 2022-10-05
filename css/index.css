@@ -342,6 +342,7 @@ main section.section-hero .slider-hero button.button {
   top: 50%;
   transform: translateY(-50%);
   font-size: 2rem;
+  cursor: pointer;
 }
 main section.section-hero .slider-hero button.button__previous {
   left: 0;

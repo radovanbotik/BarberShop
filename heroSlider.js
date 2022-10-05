@@ -11,27 +11,26 @@ const spreadImages = () => {
 };
 
 const translateImages = () => {
+  if (counter > slides.length - 1) {
+    counter = 0;
+  }
+  if (counter < 0) {
+    counter = slides.length - 1;
+  }
   slides.forEach(slide => {
     slide.style.transform = `translateX(-${100 * counter}%)`;
   });
 };
 
 const heroSlider = () => {
-  spreadImages();
   sliderNext.addEventListener("click", () => {
-    if (counter >= slides.length - 1) {
-      counter = 0;
-    }
-    translateImages();
     counter++;
+    translateImages();
   });
   sliderPrevious.addEventListener("click", () => {
-    if (counter <= 0) {
-      counter = slides.length - 1;
-    }
-    translateImages();
     counter--;
+    translateImages();
   });
 };
-
+spreadImages();
 export { heroSlider };
