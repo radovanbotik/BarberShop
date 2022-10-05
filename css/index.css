@@ -424,8 +424,48 @@ main section.section-story div.control-group div.cards-group article.card:hover 
 main section.section-story div.control-group div.cards-group article.card:hover img {
   opacity: 0.3;
 }
-main section.about {
-  display: none;
+main section.section-about div.control-group {
+  padding: 0 var(--vspace-1);
+  display: grid;
+  grid-template-areas: "a a a" "b b b" "c c c";
+  -moz-column-gap: var(--vspace-3);
+       column-gap: var(--vspace-3);
+}
+@media (min-width: 700px) {
+  main section.section-about div.control-group {
+    grid-template-areas: "a a a" "b c d";
+  }
+}
+main section.section-about div.control-group h1 {
+  grid-area: a;
+  text-transform: uppercase;
+  font-family: var(--Oswald);
+  font-weight: 400;
+  display: flex;
+  gap: var(--vspace-3);
+}
+main section.section-about div.control-group h1 span.underline {
+  flex: 1;
+  position: relative;
+  -webkit-text-decoration: underline 1px solid orange;
+          text-decoration: underline 1px solid orange;
+}
+main section.section-about div.control-group h1 span.underline::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  background-color: orange;
+}
+main section.section-about div.control-group h3 {
+  grid-area: b;
+  text-transform: uppercase;
+  font-family: var(--Oswald);
+  font-weight: 700;
+}
+main section.section-about div.control-group p {
+  font-family: var(--Raleway);
 }
 
 aside.sidebar {
