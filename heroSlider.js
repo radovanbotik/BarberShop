@@ -1,6 +1,6 @@
 const sliderPrevious = document.querySelector("#slider-previous");
 const sliderNext = document.querySelector("#slider-next");
-const slides = [...document.querySelectorAll('[data-id="slide-image"]')];
+const slides = [...document.querySelectorAll('#hero-slider [data-id="slide"]')];
 
 let counter = 0;
 
@@ -11,6 +11,7 @@ const spreadImages = () => {
 };
 
 const translateImages = () => {
+  spreadImages();
   if (counter > slides.length - 1) {
     counter = 0;
   }
@@ -32,5 +33,4 @@ const heroSlider = () => {
     translateImages();
   });
 };
-spreadImages();
 export { heroSlider };

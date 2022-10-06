@@ -175,6 +175,11 @@ sup {
 .icon {
   font-size: inherit;
   color: inherit;
+  cursor: pointer;
+}
+
+.control-group {
+  padding: var(--vspace-0);
 }
 
 .center {
@@ -188,6 +193,7 @@ sup {
   background: none;
   font-size: inherit;
   color: inherit;
+  cursor: pointer;
 }
 
 .list-dropdown {
@@ -207,7 +213,6 @@ sup {
 }
 
 main {
-  width: 100%;
   position: relative;
   transition: var(--transition-250ms);
 }
@@ -329,29 +334,29 @@ main section.section-hero {
   height: 100vh;
   width: 100%;
 }
-main section.section-hero .slider-hero {
+main section.section-hero .control-group-slider {
   height: 100%;
   width: 100%;
   position: relative;
   overflow: hidden;
 }
-main section.section-hero .slider-hero img {
+main section.section-hero .control-group-slider img {
   position: absolute;
   filter: grayscale(100%);
   transition: var(--transition-250ms);
 }
-main section.section-hero .slider-hero button.button {
+main section.section-hero .control-group-slider button.button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   font-size: 2rem;
   cursor: pointer;
 }
-main section.section-hero .slider-hero button.button__previous {
+main section.section-hero .control-group-slider button.button__previous {
   left: 0;
   transform: translateY(-50%);
 }
-main section.section-hero .slider-hero button.button__next {
+main section.section-hero .control-group-slider button.button__next {
   right: 0;
 }
 main section.section-story div.control-group {
@@ -371,7 +376,7 @@ main section.section-story div.control-group blockquote {
   align-self: center;
   text-align: center;
   font-family: var(--Libre-Baskerville);
-  width: 50ch;
+  max-width: 50ch;
 }
 main section.section-story div.control-group div.cards-group {
   display: flex;
@@ -381,7 +386,6 @@ main section.section-story div.control-group div.cards-group {
 }
 main section.section-story div.control-group div.cards-group article.card {
   min-width: 240px;
-  max-width: 420px;
   aspect-ratio: 3/2;
   flex: 1;
   display: grid;
@@ -425,9 +429,8 @@ main section.section-story div.control-group div.cards-group article.card:hover 
   opacity: 0.3;
 }
 main section.section-about div.control-group {
-  padding: 0 var(--vspace-1);
   display: grid;
-  grid-template-areas: "a a a" "b b b" "c c c";
+  grid-template-areas: "a a a" "b b b" "c c c" "d d d";
   -moz-column-gap: var(--vspace-3);
        column-gap: var(--vspace-3);
 }
@@ -467,11 +470,256 @@ main section.section-about div.control-group h3 {
 main section.section-about div.control-group p {
   font-family: var(--Raleway);
 }
+main section.section-about div.control-group p:nth-of-type(1) {
+  grid-area: c;
+}
+main section.section-about div.control-group p:nth-of-type(2) {
+  grid-area: d;
+}
+main section.section-services {
+  background-color: black;
+  position: relative;
+}
+main section.section-services div.control-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  z-index: 100;
+  position: relative;
+}
+main section.section-services div.control-group h1.section-title {
+  text-transform: uppercase;
+  font-family: var(--Oswald);
+  font-weight: 400;
+  text-align: center;
+}
+main section.section-services div.control-group blockquote.section-quote {
+  font-family: var(--Libre-Baskerville);
+  max-width: 50ch;
+  text-align: center;
+}
+main section.section-services div.control-group ul.list {
+  align-self: stretch;
+  display: grid;
+  -moz-column-gap: var(--vspace-2);
+       column-gap: var(--vspace-2);
+  grid-template-columns: 1fr;
+}
+@media (min-width: 700px) {
+  main section.section-services div.control-group ul.list {
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+  }
+}
+main section.section-services div.control-group ul.list li.service h4 {
+  display: flex;
+  align-items: flex-end;
+  font-family: var(--Oswald);
+}
+main section.section-services div.control-group ul.list li.service h4 span.service-name {
+  flex: 1;
+  border-bottom: 1px solid var(--Colour-font-main);
+}
+main section.section-services div.control-group ul.list li.service h6.service-details {
+  font-family: var(--Raleway);
+  margin: 0;
+}
+main section.section-services img.heroimage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 1;
+  opacity: 0.3;
+}
+main section.section-testimonials {
+  height: 40vh;
+  width: 100%;
+}
+main section.section-testimonials .control-group-slider {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+main section.section-testimonials .control-group-slider div.testimonial {
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  transition: var(--transition-250ms);
+}
+main section.section-testimonials .control-group-slider div.testimonial q.bigtitle {
+  text-transform: uppercase;
+}
+main section.section-testimonials .control-group-slider button.button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  cursor: pointer;
+}
+main section.section-testimonials .control-group-slider button.button__previous {
+  left: 0;
+  transform: translateY(-50%);
+}
+main section.section-testimonials .control-group-slider button.button__next {
+  right: 0;
+}
+main section.section-gallery div.control-group {
+  padding: 0 var(--vspace-0);
+}
+main section.section-gallery div.control-group div.cards-group {
+  display: flex;
+  place-content: center;
+  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--vspace-3);
+}
+@media (max-width: 600px) {
+  main section.section-gallery div.control-group div.cards-group {
+    grid-template-columns: 1fr;
+  }
+}
+main section.section-gallery div.control-group div.cards-group article.card {
+  aspect-ratio: 3/2;
+  flex: 1;
+  display: grid;
+  place-content: center;
+  position: relative;
+  font-family: var(--Raleway);
+  overflow: hidden;
+}
+main section.section-gallery div.control-group div.cards-group article.card div.control-group {
+  opacity: 0;
+  padding: var(--vspace-2);
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  z-index: 1;
+  transition: var(--transition-250ms);
+}
+main section.section-gallery div.control-group div.cards-group article.card div.control-group h5 {
+  font-style: italic;
+  margin: 0;
+}
+main section.section-gallery div.control-group div.cards-group article.card div.control-group button.button {
+  font-size: 1.5rem;
+}
+main section.section-gallery div.control-group div.cards-group article.card div.control-group h4 {
+  text-transform: uppercase;
+  margin: 0;
+}
+main section.section-gallery div.control-group div.cards-group article.card img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  z-index: 0;
+  display: block;
+  opacity: 0.9;
+  transition: var(--transition-250ms);
+}
+main section.section-gallery div.control-group div.cards-group article.card:hover div.control-group {
+  opacity: 1;
+}
+main section.section-gallery div.control-group div.cards-group article.card:hover img {
+  opacity: 0.3;
+  transform: scale(1.1);
+}
+main section.section-team div.control-group {
+  display: flex;
+  flex-direction: column;
+  -moz-column-gap: var(--vspace-3);
+       column-gap: var(--vspace-3);
+}
+main section.section-team div.control-group h1 {
+  grid-area: a;
+  text-transform: uppercase;
+  font-family: var(--Oswald);
+  font-weight: 400;
+  display: flex;
+  gap: var(--vspace-3);
+}
+main section.section-team div.control-group h1 span.underline {
+  flex: 1;
+  position: relative;
+  -webkit-text-decoration: underline 1px solid orange;
+          text-decoration: underline 1px solid orange;
+}
+main section.section-team div.control-group h1 span.underline::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  background-color: orange;
+}
+main section.section-team div.control-group div.group-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--vspace-0);
+}
+main section.section-team div.control-group div.group-cards article.card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+main section.section-team div.control-group div.group-cards article.card img.card__image {
+  width: 100%;
+  height: 100%;
+  filter: grayscale(40%);
+  position: relative;
+}
+main section.section-team div.control-group div.group-cards article.card div.card__header {
+  margin-top: var(--vspace-3);
+  margin-bottom: var(--vspace-3);
+}
+main section.section-team div.control-group div.group-cards article.card div.card__header h2 {
+  font-family: var(--Oswald);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+main section.section-team div.control-group div.group-cards article.card div.card__header span {
+  font-family: var(--Libre-Baskerville);
+  font-style: italic;
+  text-transform: capitalize;
+  color: var(--Colour-font-accent);
+}
+main section.section-team div.control-group div.group-cards article.card div.card__body {
+  margin-top: var(--vspace-3);
+  margin-bottom: var(--vspace-3);
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  font-family: var(--Raleway);
+}
+main section.section-team div.control-group div.group-cards article.card div.card__footer div.socials {
+  margin-top: var(--vspace-3);
+  margin-bottom: var(--vspace-3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--vspace-2);
+}
+main section.section-team div.control-group div.group-cards article.card div.card__footer div.socials svg {
+  width: 14px;
+  aspect-ratio: 1;
+}
+main section.section-team div.control-group div.group-cards article.card div.card__footer div.socials svg path {
+  fill: var(--Colour-font-accent);
+}
 
 aside.sidebar {
   position: absolute;
   width: 300px;
-  height: 100%;
+  height: 100vh;
   -webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
           clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
   top: 0;

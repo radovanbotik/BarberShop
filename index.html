@@ -71,29 +71,33 @@
         </nav>
       </header>
       <section class="section section-hero" id="hero-slider">
-        <div class="slider slider-hero">
+        <div class="control-group-slider slider-hero">
           <img
             src="./assets/heros/hero-1.jpg"
             alt=""
             id="hero-image1"
-            data-id="slide-image"
+            data-id="slide"
           />
           <img
             src="./assets/heros/hero-2.jpg"
             alt=""
             id="hero-image2"
-            data-id="slide-image"
+            data-id="slide"
           />
           <img
             src="./assets/heros/hero-3.jpg"
             alt=""
             id="hero-image3"
-            data-id="slide-image"
+            data-id="slide"
           />
-          <button class="button button__previous" id="slider-previous">
+          <button
+            class="button button__previous"
+            id="slider-previous"
+            data-id="hero"
+          >
             <span class="material-symbols-outlined icon"> west </span>
           </button>
-          <button class="button button__next" id="slider-next">
+          <button class="button button__next" id="slider-next" data-id="hero">
             <span class="material-symbols-outlined icon"> east </span>
           </button>
         </div>
@@ -101,7 +105,7 @@
       <section class="section section-story">
         <div class="control-group">
           <h2>haircut & shaving</h2>
-          <blockquote>
+          <blockquote class="section-quote">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit optio
             explicabo ducimus praesentium magnam? Sed dolorem nisi rerum
             nesciunt vitae!
@@ -136,7 +140,7 @@
       </section>
       <section class="section section-about">
         <div class="control-group">
-          <h1 class="">
+          <h1 class="section-title">
             about us
             <span class="underline"></span>
           </h1>
@@ -160,10 +164,706 @@
           </p>
         </div>
       </section>
+      <section class="section section-services">
+        <div class="control-group">
+          <h1 class="section-title">our services</h1>
+          <blockquote class="section-quote">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Praesentium fuga animi unde cum illum quia!
+          </blockquote>
+          <ul class="list list-dropdown">
+            <!-- start of  service item -->
+            <li class="list-item list-item-group service">
+              <h4>
+                <span class="service-name">haircut</span>
+                <span class="service-price">18.00eur</span>
+              </h4>
+              <h6 class="service-details">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Quaerat, facilis.
+              </h6>
+            </li>
+            <!-- end of  service item -->
+            <!-- start of  service item -->
+            <li class="list-item list-item-group service">
+              <h4>
+                <span class="service-name">haircut</span>
+                <span class="service-price">18.00eur</span>
+              </h4>
+              <h6 class="service-details">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Quaerat, facilis.
+              </h6>
+            </li>
+            <!-- end of  service item -->
+            <!-- start of  service item -->
+            <li class="list-item list-item-group service">
+              <h4>
+                <span class="service-name">haircut</span>
+                <span class="service-price">18.00eur</span>
+              </h4>
+              <h6 class="service-details">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Quaerat, facilis.
+              </h6>
+            </li>
+            <!-- end of  service item -->
+            <!-- start of  service item -->
+            <li class="list-item list-item-group service">
+              <h4>
+                <span class="service-name">haircut</span>
+                <span class="service-price">18.00eur</span>
+              </h4>
+              <h6 class="service-details">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Quaerat, facilis.
+              </h6>
+            </li>
+            <!-- end of  service item -->
+            <!-- start of  service item -->
+            <li class="list-item list-item-group service">
+              <h4>
+                <span class="service-name">haircut</span>
+                <span class="service-price">18.00eur</span>
+              </h4>
+              <h6 class="service-details">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Quaerat, facilis.
+              </h6>
+            </li>
+            <!-- end of  service item -->
+            <!-- start of  service item -->
+            <li class="list-item list-item-group service">
+              <h4>
+                <span class="service-name">haircut</span>
+                <span class="service-price">18.00eur</span>
+              </h4>
+              <h6 class="service-details">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Quaerat, facilis.
+              </h6>
+            </li>
+            <!-- end of  service item -->
+          </ul>
+        </div>
+        <img src="./assets/heros/hero-7.jpg" alt="" class="heroimage" />
+      </section>
+      <section class="section section-testimonials">
+        <div class="control-group-slider" id="slider-testimonials">
+          <div class="testimonial" data-id="slide">
+            <q class="bigtitle"> I am who I am</q>
+            <h6>King Von</h6>
+          </div>
+
+          <div class="testimonial" data-id="slide">
+            <q class="bigtitle"> Go Shaolin</q>
+            <h6>50 cent</h6>
+          </div>
+
+          <div class="testimonial" data-id="slide">
+            <q class="bigtitle"> wow </q>
+            <h6>Owen Wilson</h6>
+          </div>
+
+          <button
+            class="button button__previous"
+            id="testimonial-slider-previous"
+          >
+            <span class="material-symbols-outlined icon"> west </span>
+          </button>
+          <button class="button button__next" id="testimonial-slider-next">
+            <span class="material-symbols-outlined icon"> east </span>
+          </button>
+        </div>
+      </section>
+      <section class="section section-gallery">
+        <div class="control-group">
+          <div class="cards-group">
+            <article class="card">
+              <div class="control-group">
+                <button class="button">
+                  <span class="material-symbols-outlined icon"> add </span>
+                </button>
+              </div>
+              <img src="./assets/heros/hero-1.jpg" alt="" />
+            </article>
+            <article class="card">
+              <div class="control-group">
+                <button class="button">
+                  <span class="material-symbols-outlined icon"> add </span>
+                </button>
+              </div>
+              <img src="./assets/heros/hero-2.jpg" alt="" />
+            </article>
+            <article class="card">
+              <div class="control-group">
+                <button class="button">
+                  <span class="material-symbols-outlined icon"> add </span>
+                </button>
+              </div>
+              <img src="./assets/heros/hero-5.jpg" alt="" />
+            </article>
+            <article class="card">
+              <div class="control-group">
+                <button class="button">
+                  <span class="material-symbols-outlined icon"> add </span>
+                </button>
+              </div>
+              <img src="./assets/heros/hero-6.jpg" alt="" />
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section section-team">
+        <div class="control-group">
+          <h1 class="section-title">
+            team
+            <span class="underline"></span>
+          </h1>
+          <div class="group-cards">
+            <article class="card">
+              <img src="./assets/heros/hero-8.jpg" alt="" class="card__image" />
+              <div class="card__header">
+                <h2>chad king</h2>
+                <span>barber and stylist</span>
+              </div>
+              <div class="card__body">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Id,
+                  hic aperiam magni recusandae officiis alias!
+                </p>
+              </div>
+              <div class="card__footer">
+                <div class="socials">
+                  <a href="">
+                    <svg
+                      version="1.1"
+                      id="Capa_1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      x="0px"
+                      y="0px"
+                      viewBox="0 0 512 512"
+                      style="enable-background: new 0 0 512 512"
+                      xml:space="preserve"
+                    >
+                      <g>
+                        <g>
+                          <path
+                            d="M352,0H160C71.648,0,0,71.648,0,160v192c0,88.352,71.648,160,160,160h192c88.352,0,160-71.648,160-160V160
+			C512,71.648,440.352,0,352,0z M464,352c0,61.76-50.24,112-112,112H160c-61.76,0-112-50.24-112-112V160C48,98.24,98.24,48,160,48
+			h192c61.76,0,112,50.24,112,112V352z"
+                          />
+                        </g>
+                      </g>
+                      <g>
+                        <g>
+                          <path
+                            d="M256,128c-70.688,0-128,57.312-128,128s57.312,128,128,128s128-57.312,128-128S326.688,128,256,128z M256,336
+			c-44.096,0-80-35.904-80-80c0-44.128,35.904-80,80-80s80,35.872,80,80C336,300.096,300.096,336,256,336z"
+                          />
+                        </g>
+                      </g>
+                      <g>
+                        <g>
+                          <circle cx="393.6" cy="118.4" r="17.056" />
+                        </g>
+                      </g>
+                    </svg>
+                  </a>
+                  <a href="">
+                    <?xml version="1.0" encoding="iso-8859-1"?>
+                    <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    <svg
+                      version="1.1"
+                      id="Capa_1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      x="0px"
+                      y="0px"
+                      viewBox="0 0 512 512"
+                      style="enable-background: new 0 0 512 512"
+                      xml:space="preserve"
+                    >
+                      <g>
+                        <g>
+                          <path
+                            d="M288,176v-64c0-17.664,14.336-32,32-32h32V0h-64c-53.024,0-96,42.976-96,96v80h-64v80h64v256h96V256h64l32-80H288z"
+                          />
+                        </g>
+                      </g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                    </svg>
+                  </a>
+                  <a href="">
+                    <?xml version="1.0" encoding="iso-8859-1"?>
+                    <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    <svg
+                      version="1.1"
+                      id="Capa_1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      x="0px"
+                      y="0px"
+                      viewBox="0 0 512 512"
+                      style="enable-background: new 0 0 512 512"
+                      xml:space="preserve"
+                    >
+                      <g>
+                        <g>
+                          <path
+                            d="M256,0C114.624,0,0,106.112,0,237.024c0,74.592,37.216,141.12,95.392,184.576V512l87.168-47.84
+			c23.264,6.432,47.904,9.92,73.44,9.92c141.376,0,256-106.112,256-237.024S397.376,0,256,0z M281.44,319.2l-65.184-69.536
+			L89.056,319.2l139.936-148.544l66.784,69.536l125.6-69.536L281.44,319.2z"
+                          />
+                        </g>
+                      </g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                    </svg>
+                  </a>
+                  <a href="">
+                    <?xml version="1.0" encoding="iso-8859-1"?>
+                    <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    <svg
+                      version="1.1"
+                      id="Capa_1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      x="0px"
+                      y="0px"
+                      viewBox="0 0 512 512"
+                      style="enable-background: new 0 0 512 512"
+                      xml:space="preserve"
+                    >
+                      <g>
+                        <g>
+                          <path
+                            d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016
+                          c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992
+                          c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056
+                          c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152
+                          c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792
+                          c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44
+                          C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568
+                          C480.224,136.96,497.728,118.496,512,97.248z"
+                          />
+                        </g>
+                      </g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <img src="./assets/heros/hero-9.jpg" alt="" class="card__image" />
+              <div class="card__header">
+                <h2>chad king</h2>
+                <span>barber and stylist</span>
+              </div>
+              <div class="card__body">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Id,
+                  hic aperiam magni recusandae officiis alias!
+                </p>
+              </div>
+              <div class="card__footer">
+                <div class="socials">
+                  <a href="">
+                    <svg
+                      version="1.1"
+                      id="Capa_1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      x="0px"
+                      y="0px"
+                      viewBox="0 0 512 512"
+                      style="enable-background: new 0 0 512 512"
+                      xml:space="preserve"
+                    >
+                      <g>
+                        <g>
+                          <path
+                            d="M352,0H160C71.648,0,0,71.648,0,160v192c0,88.352,71.648,160,160,160h192c88.352,0,160-71.648,160-160V160
+			C512,71.648,440.352,0,352,0z M464,352c0,61.76-50.24,112-112,112H160c-61.76,0-112-50.24-112-112V160C48,98.24,98.24,48,160,48
+			h192c61.76,0,112,50.24,112,112V352z"
+                          />
+                        </g>
+                      </g>
+                      <g>
+                        <g>
+                          <path
+                            d="M256,128c-70.688,0-128,57.312-128,128s57.312,128,128,128s128-57.312,128-128S326.688,128,256,128z M256,336
+			c-44.096,0-80-35.904-80-80c0-44.128,35.904-80,80-80s80,35.872,80,80C336,300.096,300.096,336,256,336z"
+                          />
+                        </g>
+                      </g>
+                      <g>
+                        <g>
+                          <circle cx="393.6" cy="118.4" r="17.056" />
+                        </g>
+                      </g>
+                    </svg>
+                  </a>
+                  <a href="">
+                    <?xml version="1.0" encoding="iso-8859-1"?>
+                    <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    <svg
+                      version="1.1"
+                      id="Capa_1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      x="0px"
+                      y="0px"
+                      viewBox="0 0 512 512"
+                      style="enable-background: new 0 0 512 512"
+                      xml:space="preserve"
+                    >
+                      <g>
+                        <g>
+                          <path
+                            d="M288,176v-64c0-17.664,14.336-32,32-32h32V0h-64c-53.024,0-96,42.976-96,96v80h-64v80h64v256h96V256h64l32-80H288z"
+                          />
+                        </g>
+                      </g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                    </svg>
+                  </a>
+                  <a href="">
+                    <?xml version="1.0" encoding="iso-8859-1"?>
+                    <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    <svg
+                      version="1.1"
+                      id="Capa_1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      x="0px"
+                      y="0px"
+                      viewBox="0 0 512 512"
+                      style="enable-background: new 0 0 512 512"
+                      xml:space="preserve"
+                    >
+                      <g>
+                        <g>
+                          <path
+                            d="M256,0C114.624,0,0,106.112,0,237.024c0,74.592,37.216,141.12,95.392,184.576V512l87.168-47.84
+			c23.264,6.432,47.904,9.92,73.44,9.92c141.376,0,256-106.112,256-237.024S397.376,0,256,0z M281.44,319.2l-65.184-69.536
+			L89.056,319.2l139.936-148.544l66.784,69.536l125.6-69.536L281.44,319.2z"
+                          />
+                        </g>
+                      </g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                    </svg>
+                  </a>
+                  <a href="">
+                    <?xml version="1.0" encoding="iso-8859-1"?>
+                    <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    <svg
+                      version="1.1"
+                      id="Capa_1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      x="0px"
+                      y="0px"
+                      viewBox="0 0 512 512"
+                      style="enable-background: new 0 0 512 512"
+                      xml:space="preserve"
+                    >
+                      <g>
+                        <g>
+                          <path
+                            d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016
+                          c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992
+                          c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056
+                          c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152
+                          c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792
+                          c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44
+                          C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568
+                          C480.224,136.96,497.728,118.496,512,97.248z"
+                          />
+                        </g>
+                      </g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <img src="./assets/heros/hero-7.jpg" alt="" class="card__image" />
+              <div class="card__header">
+                <h2>chad king</h2>
+                <span>barber and stylist</span>
+              </div>
+              <div class="card__body">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Id,
+                  hic aperiam magni recusandae officiis alias!
+                </p>
+              </div>
+              <div class="card__footer">
+                <div class="socials">
+                  <a href="">
+                    <svg
+                      version="1.1"
+                      id="Capa_1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      x="0px"
+                      y="0px"
+                      viewBox="0 0 512 512"
+                      style="enable-background: new 0 0 512 512"
+                      xml:space="preserve"
+                    >
+                      <g>
+                        <g>
+                          <path
+                            d="M352,0H160C71.648,0,0,71.648,0,160v192c0,88.352,71.648,160,160,160h192c88.352,0,160-71.648,160-160V160
+			C512,71.648,440.352,0,352,0z M464,352c0,61.76-50.24,112-112,112H160c-61.76,0-112-50.24-112-112V160C48,98.24,98.24,48,160,48
+			h192c61.76,0,112,50.24,112,112V352z"
+                          />
+                        </g>
+                      </g>
+                      <g>
+                        <g>
+                          <path
+                            d="M256,128c-70.688,0-128,57.312-128,128s57.312,128,128,128s128-57.312,128-128S326.688,128,256,128z M256,336
+			c-44.096,0-80-35.904-80-80c0-44.128,35.904-80,80-80s80,35.872,80,80C336,300.096,300.096,336,256,336z"
+                          />
+                        </g>
+                      </g>
+                      <g>
+                        <g>
+                          <circle cx="393.6" cy="118.4" r="17.056" />
+                        </g>
+                      </g>
+                    </svg>
+                  </a>
+                  <a href="">
+                    <?xml version="1.0" encoding="iso-8859-1"?>
+                    <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    <svg
+                      version="1.1"
+                      id="Capa_1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      x="0px"
+                      y="0px"
+                      viewBox="0 0 512 512"
+                      style="enable-background: new 0 0 512 512"
+                      xml:space="preserve"
+                    >
+                      <g>
+                        <g>
+                          <path
+                            d="M288,176v-64c0-17.664,14.336-32,32-32h32V0h-64c-53.024,0-96,42.976-96,96v80h-64v80h64v256h96V256h64l32-80H288z"
+                          />
+                        </g>
+                      </g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                    </svg>
+                  </a>
+                  <a href="">
+                    <?xml version="1.0" encoding="iso-8859-1"?>
+                    <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    <svg
+                      version="1.1"
+                      id="Capa_1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      x="0px"
+                      y="0px"
+                      viewBox="0 0 512 512"
+                      style="enable-background: new 0 0 512 512"
+                      xml:space="preserve"
+                    >
+                      <g>
+                        <g>
+                          <path
+                            d="M256,0C114.624,0,0,106.112,0,237.024c0,74.592,37.216,141.12,95.392,184.576V512l87.168-47.84
+			c23.264,6.432,47.904,9.92,73.44,9.92c141.376,0,256-106.112,256-237.024S397.376,0,256,0z M281.44,319.2l-65.184-69.536
+			L89.056,319.2l139.936-148.544l66.784,69.536l125.6-69.536L281.44,319.2z"
+                          />
+                        </g>
+                      </g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                    </svg>
+                  </a>
+                  <a href="">
+                    <?xml version="1.0" encoding="iso-8859-1"?>
+                    <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    <svg
+                      version="1.1"
+                      id="Capa_1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      x="0px"
+                      y="0px"
+                      viewBox="0 0 512 512"
+                      style="enable-background: new 0 0 512 512"
+                      xml:space="preserve"
+                    >
+                      <g>
+                        <g>
+                          <path
+                            d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016
+                          c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992
+                          c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056
+                          c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152
+                          c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792
+                          c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44
+                          C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568
+                          C480.224,136.96,497.728,118.496,512,97.248z"
+                          />
+                        </g>
+                      </g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section section-book-online">
+        <div class="control-group">
+          <img src="" alt="" class="image--razor" />
+          <h1 class="bigtitle">
+            get a blade discount. 15% off for a web reservation.
+          </h1>
+          <button class="button">read more</button>
+        </div>
+      </section>
     </main>
     <aside class="sidebar" id="sidebar">
       <a href="index.html" class="link link-logo">
-        <!-- <img src="" alt="" class="image image-logo" /> -->
         <h2 class="logo">barbers</h2>
       </a>
       <p class="about">
@@ -189,7 +889,7 @@
 
       <span class="social">
         <h3>follow us</h3>
-        <span>
+        <span class="icon">
           <?xml version="1.0" encoding="iso-8859-1"?>
           <svg
             version="1.1"
@@ -226,9 +926,8 @@
             </g>
           </svg>
         </span>
-        <span
+        <span class="icon"
           ><?xml version="1.0" encoding="iso-8859-1"?>
-          <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
           <svg
             version="1.1"
             id="Capa_1"
@@ -266,7 +965,7 @@
             <g></g>
           </svg>
         </span>
-        <span>
+        <span class="icon">
           <?xml version="1.0" encoding="iso-8859-1"?>
           <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
           <svg
@@ -287,26 +986,10 @@
                 />
               </g>
             </g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
-            <g></g>
           </svg>
         </span>
-        <span>
+        <span class="icon">
           <?xml version="1.0" encoding="iso-8859-1"?>
-          <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
           <svg
             version="1.1"
             id="Capa_1"
@@ -355,5 +1038,13 @@
         <span class="material-symbols-outlined icon"> close </span>
       </button>
     </aside>
+    <footer>
+      <div class="control-group">
+        <div class="about col1"></div>
+        <div class="opening col2"></div>
+        <div class="socials col3"></div>
+        <div class="gallery col4"></div>
+      </div>
+    </footer>
   </body>
 </html>
