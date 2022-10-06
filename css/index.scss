@@ -27,6 +27,7 @@
 
   /* Transitions */
   --transition-250ms: all 250ms ease-in;
+  --transition-150ms: all 150ms ease-in-out;
 }
 //--- End of variables --- //
 
@@ -409,7 +410,7 @@ main {
       }
     }
   }
-  section.section-story {
+  section.section-options {
     div.control-group {
       padding: 0 var(--vspace-1);
       display: flex;
@@ -612,12 +613,15 @@ main {
   section.section-testimonials {
     height: 40vh;
     width: 100%;
-    .control-group-slider {
+    padding: var(--vspace-2);
+
+    .control-group {
       height: 100%;
       width: 100%;
       position: relative;
       overflow: hidden;
-      div.testimonial {
+      display: grid;
+      article.testimonial {
         margin: 0;
         position: absolute;
         width: 100%;
@@ -1004,6 +1008,15 @@ footer {
       ul {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+        li {
+          background-color: black;
+          img {
+            transition: var(--transition-150ms);
+          }
+          &:hover img {
+            opacity: 0.7;
+          }
+        }
       }
     }
   }

@@ -21,6 +21,7 @@
   --Colour-font-accent: #9267be;
   /* Transitions */
   --transition-250ms: all 250ms ease-in;
+  --transition-150ms: all 150ms ease-in-out;
 }
 
 * {
@@ -359,32 +360,32 @@ main section.section-hero .control-group-slider button.button__previous {
 main section.section-hero .control-group-slider button.button__next {
   right: 0;
 }
-main section.section-story div.control-group {
+main section.section-options div.control-group {
   padding: 0 var(--vspace-1);
   display: flex;
   flex-direction: column;
   -moz-column-gap: var(--vspace-3);
        column-gap: var(--vspace-3);
 }
-main section.section-story div.control-group h2 {
+main section.section-options div.control-group h2 {
   font-weight: 400;
   font-family: var(--Oswald);
   text-transform: uppercase;
   text-align: center;
 }
-main section.section-story div.control-group blockquote {
+main section.section-options div.control-group blockquote {
   align-self: center;
   text-align: center;
   font-family: var(--Libre-Baskerville);
   max-width: 50ch;
 }
-main section.section-story div.control-group div.cards-group {
+main section.section-options div.control-group div.cards-group {
   display: flex;
   place-content: center;
   flex-wrap: wrap;
   gap: var(--vspace-3);
 }
-main section.section-story div.control-group div.cards-group article.card {
+main section.section-options div.control-group div.cards-group article.card {
   min-width: 240px;
   aspect-ratio: 3/2;
   flex: 1;
@@ -393,7 +394,7 @@ main section.section-story div.control-group div.cards-group article.card {
   position: relative;
   font-family: var(--Raleway);
 }
-main section.section-story div.control-group div.cards-group article.card div.control-group {
+main section.section-options div.control-group div.cards-group article.card div.control-group {
   opacity: 0;
   padding: var(--vspace-2);
   aspect-ratio: 1;
@@ -404,28 +405,28 @@ main section.section-story div.control-group div.cards-group article.card div.co
   z-index: 1;
   transition: var(--transition-250ms);
 }
-main section.section-story div.control-group div.cards-group article.card div.control-group h5 {
+main section.section-options div.control-group div.cards-group article.card div.control-group h5 {
   font-style: italic;
   margin: 0;
 }
-main section.section-story div.control-group div.cards-group article.card div.control-group button.button {
+main section.section-options div.control-group div.cards-group article.card div.control-group button.button {
   font-size: 1.5rem;
 }
-main section.section-story div.control-group div.cards-group article.card div.control-group h4 {
+main section.section-options div.control-group div.cards-group article.card div.control-group h4 {
   text-transform: uppercase;
   margin: 0;
 }
-main section.section-story div.control-group div.cards-group article.card img {
+main section.section-options div.control-group div.cards-group article.card img {
   position: absolute;
   inset: 0;
   z-index: 0;
   display: block;
   filter: grayscale(100%);
 }
-main section.section-story div.control-group div.cards-group article.card:hover div.control-group {
+main section.section-options div.control-group div.cards-group article.card:hover div.control-group {
   opacity: 1;
 }
-main section.section-story div.control-group div.cards-group article.card:hover img {
+main section.section-options div.control-group div.cards-group article.card:hover img {
   opacity: 0.3;
 }
 main section.section-about div.control-group {
@@ -537,14 +538,16 @@ main section.section-services img.heroimage {
 main section.section-testimonials {
   height: 40vh;
   width: 100%;
+  padding: var(--vspace-2);
 }
-main section.section-testimonials .control-group-slider {
+main section.section-testimonials .control-group {
   height: 100%;
   width: 100%;
   position: relative;
   overflow: hidden;
+  display: grid;
 }
-main section.section-testimonials .control-group-slider div.testimonial {
+main section.section-testimonials .control-group article.testimonial {
   margin: 0;
   position: absolute;
   width: 100%;
@@ -553,21 +556,21 @@ main section.section-testimonials .control-group-slider div.testimonial {
   place-items: center;
   transition: var(--transition-250ms);
 }
-main section.section-testimonials .control-group-slider div.testimonial q.bigtitle {
+main section.section-testimonials .control-group article.testimonial q.bigtitle {
   text-transform: uppercase;
 }
-main section.section-testimonials .control-group-slider button.button {
+main section.section-testimonials .control-group button.button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   font-size: 2rem;
   cursor: pointer;
 }
-main section.section-testimonials .control-group-slider button.button__previous {
+main section.section-testimonials .control-group button.button__previous {
   left: 0;
   transform: translateY(-50%);
 }
-main section.section-testimonials .control-group-slider button.button__next {
+main section.section-testimonials .control-group button.button__next {
   right: 0;
 }
 main section.section-gallery div.control-group {
@@ -873,4 +876,13 @@ footer div.control-group article.column h2 {
 footer div.control-group article.column--gallery ul {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+}
+footer div.control-group article.column--gallery ul li {
+  background-color: black;
+}
+footer div.control-group article.column--gallery ul li img {
+  transition: var(--transition-150ms);
+}
+footer div.control-group article.column--gallery ul li:hover img {
+  opacity: 0.7;
 }/*# sourceMappingURL=index.css.map */
