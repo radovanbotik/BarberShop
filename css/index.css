@@ -546,6 +546,7 @@ main section.section-testimonials .control-group {
   position: relative;
   overflow: hidden;
   display: grid;
+  grid-auto-flow: row;
 }
 main section.section-testimonials .control-group article.testimonial {
   margin: 0;
@@ -558,6 +559,7 @@ main section.section-testimonials .control-group article.testimonial {
 }
 main section.section-testimonials .control-group article.testimonial q.bigtitle {
   text-transform: uppercase;
+  text-align: center;
 }
 main section.section-testimonials .control-group button.button {
   position: absolute;

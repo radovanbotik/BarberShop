@@ -621,6 +621,7 @@ main {
       position: relative;
       overflow: hidden;
       display: grid;
+      grid-auto-flow: row;
       article.testimonial {
         margin: 0;
         position: absolute;
@@ -631,6 +632,7 @@ main {
         transition: var(--transition-250ms);
         q.bigtitle {
           text-transform: uppercase;
+          text-align: center;
         }
       }
       button.button {
