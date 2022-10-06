@@ -1,0 +1,22 @@
+[
+  {
+    "platform": "instagram",
+    "domain": "https://www.instagram.com/",
+    "icon": "./assets/icons/instagram.svg"
+  },
+  {
+    "platform": "facebook",
+    "domain": "https://www.facebook.com/",
+    "icon": "./assets/icons/facebook.svg"
+  },
+  {
+    "platform": "messenger",
+    "domain": "https://www.messenger.com/",
+    "icon": "./assets/icons/messenger.svg"
+  },
+  {
+    "platform": "twitter",
+    "domain": "https://www.twitter.com/",
+    "icon": "./assets/icons/twitter.svg"
+  }
+]
