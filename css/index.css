@@ -36,7 +36,7 @@ html {
 body {
   font-size: 1em;
 }
-body.sidebarActive aside.sidebar {
+body.sidebarActive aside.sidebar .control-group {
   display: block;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
@@ -635,8 +635,6 @@ main section.section-gallery div.control-group div.cards-group article.card:hove
   transform: scale(1.1);
 }
 main section.section-team div.control-group {
-  display: flex;
-  flex-direction: column;
   -moz-column-gap: var(--vspace-3);
        column-gap: var(--vspace-3);
 }
@@ -715,8 +713,49 @@ main section.section-team div.control-group div.group-cards article.card div.car
 main section.section-team div.control-group div.group-cards article.card div.card__footer div.socials svg path {
   fill: var(--Colour-font-accent);
 }
+main section.section-book-online {
+  min-height: 50vh;
+  background-color: black;
+  position: relative;
+  display: grid;
+  place-content: center;
+}
+main section.section-book-online div.control-group {
+  display: grid;
+  z-index: 1;
+  color: var(--Colour-font-main);
+  place-content: center;
+}
+main section.section-book-online div.control-group div.image-container {
+  margin: 0 auto;
+  width: 240px;
+  aspect-ratio: 1;
+}
+main section.section-book-online div.control-group div.image-container img.image--product {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main section.section-book-online div.control-group h1.bigtitle {
+  text-transform: uppercase;
+  font-family: var(--Oswald);
+}
+main section.section-book-online div.control-group button.button--action {
+  display: inline-block;
+  justify-self: center;
+  font-family: var(--Oswald);
+  text-transform: uppercase;
+  background-color: var(--Colour-font-accent);
+  align-self: center;
+  padding: var(--vspace-3) var(--vspace-2);
+}
+main section.section-book-online img.image--background {
+  position: absolute;
+  opacity: 0.6;
+  inset: 0;
+  filter: grayscale(100%);
+}
 
-aside.sidebar {
+aside.sidebar .control-group {
   position: absolute;
   width: 300px;
   height: 100vh;
@@ -731,49 +770,49 @@ aside.sidebar {
   transition: var(--transition-250ms);
   color: var(--Colour-font-main);
 }
-aside.sidebar h1,
-aside.sidebar h2,
-aside.sidebar h3,
-aside.sidebar h4,
-aside.sidebar h5,
-aside.sidebar h6 {
+aside.sidebar .control-group h1,
+aside.sidebar .control-group h2,
+aside.sidebar .control-group h3,
+aside.sidebar .control-group h4,
+aside.sidebar .control-group h5,
+aside.sidebar .control-group h6 {
   color: var(--Colour-font-main);
   font-family: var(--Oswald);
   font-weight: 300;
 }
-aside.sidebar p.about {
+aside.sidebar .control-group p.about {
   width: 30ch;
 }
-aside.sidebar article.group ul {
+aside.sidebar .control-group article.group ul {
   display: flex;
   gap: var(--vspace-3);
   flex-direction: column;
   list-style: circle;
   list-style-position: inside;
 }
-aside.sidebar button.button-toggle {
+aside.sidebar .control-group button.button-toggle {
   position: absolute;
   top: 1.5rem;
   right: 1.5rem;
   font-size: 2rem;
 }
-aside.sidebar span.social {
+aside.sidebar .control-group span.social {
   display: flex;
   align-items: baseline;
   gap: var(--vspace-3);
 }
-aside.sidebar span.social h3 {
+aside.sidebar .control-group span.social h3 {
   display: flex;
   align-items: flex-end;
 }
-aside.sidebar span.social span {
+aside.sidebar .control-group span.social span {
   height: 1.25rem;
   width: 1.25rem;
 }
-aside.sidebar span.social span svg {
+aside.sidebar .control-group span.social span svg {
   height: 100%;
   width: 100%;
 }
-aside.sidebar span.social span svg path {
+aside.sidebar .control-group span.social span svg path {
   fill: var(--Colour-font-main);
 }/*# sourceMappingURL=index.css.map */
