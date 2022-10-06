@@ -952,6 +952,11 @@ footer {
   div.control-group {
     font-family: var(--Raleway);
     display: grid;
+    @include desktop() {
+      grid-auto-flow: column;
+      grid-auto-columns: 1fr;
+    }
+
     gap: var(--vspace-2);
     article.column {
       ul {
@@ -995,13 +1000,11 @@ footer {
         text-transform: uppercase;
       }
     }
-    article.column--socials {
+    article.column--gallery {
       ul {
-        li {
-        }
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
       }
-    }
-    article.column--1 {
     }
   }
 }

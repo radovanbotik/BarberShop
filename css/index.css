@@ -826,6 +826,12 @@ footer div.control-group {
   display: grid;
   gap: var(--vspace-2);
 }
+@media (min-width: 700px) {
+  footer div.control-group {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+}
 footer div.control-group article.column ul {
   display: flex;
   flex-direction: column;
@@ -863,4 +869,8 @@ footer div.control-group article.column h2 {
   font-family: var(--Oswald);
   font-weight: 400;
   text-transform: uppercase;
+}
+footer div.control-group article.column--gallery ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
 }/*# sourceMappingURL=index.css.map */
