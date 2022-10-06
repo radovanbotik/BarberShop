@@ -206,6 +206,7 @@ sup {
   font-style: italic;
   font-weight: normal;
 }
+
 //---End of Type Scale---//
 
 //--- Start of  Google Icons ---//
@@ -946,8 +947,61 @@ aside.sidebar {
   }
 }
 footer {
+  background-color: var(--Colour-bg-main);
+  color: var(--Colour-font-main);
   div.control-group {
-    div.about {
+    font-family: var(--Raleway);
+    display: grid;
+    gap: var(--vspace-2);
+    article.column {
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: var(--vspace-3);
+        margin: var(--vspace) 0;
+
+        li {
+          display: flex;
+          align-items: center;
+          justify-items: flex-start;
+          gap: var(--vspace-3);
+          span {
+            text-transform: capitalize;
+          }
+          span.icon {
+            // color: var(--Colour-font-main);
+            color: var(--Colour-font-accent);
+            width: 1em;
+            height: 1em;
+            svg {
+              width: 100%;
+              height: 100%;
+              path {
+                fill: var(--Colour-font-main);
+              }
+            }
+          }
+          span.hours,
+          sup.hours {
+            width: 20ch;
+            margin: 0;
+          }
+        }
+      }
+      h2 {
+        margin: 0;
+        font-family: var(--Oswald);
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+    }
+    article.column--socials {
+      ul {
+        li {
+        }
+      }
+    }
+    article.column--1 {
     }
   }
 }
