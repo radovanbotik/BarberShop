@@ -260,6 +260,9 @@ main header nav.navigation button.button-toggle {
           appearance: none;
   grid-area: a;
 }
+main header nav.navigation button.button-toggle:hover {
+  color: var(--Colour-font-main);
+}
 main header nav.navigation button.button-toggle__sidebar {
   display: none;
 }
@@ -284,6 +287,9 @@ main header nav.navigation a.link-logo h4.logo {
   color: inherit;
   margin: 0;
   text-transform: uppercase;
+}
+main header nav.navigation a.link-logo:hover {
+  color: var(--Colour-font-main);
 }
 main header ul.list-dropdown {
   grid-area: c;
@@ -320,6 +326,9 @@ main header ul.list-dropdown li.list-item-navigation {
   main header ul.list-dropdown li.list-item-navigation span.icon {
     display: none;
   }
+}
+main header ul.list-dropdown li:hover {
+  color: var(--Colour-font-main);
 }
 main header ul.list-dropdown li.list-item-active {
   position: relative;
@@ -360,6 +369,9 @@ main section.section-hero .control-group-slider button.button__previous {
 }
 main section.section-hero .control-group-slider button.button__next {
   right: 0;
+}
+main section.section-hero .control-group-slider button.button:hover {
+  color: var(--Colour-font-main);
 }
 main section.section-options div.control-group {
   padding: 0 var(--vspace-1);
@@ -714,7 +726,13 @@ main section.section-team div.control-group div.group-cards article.card div.car
   align-items: center;
   gap: var(--vspace-2);
 }
-main section.section-team div.control-group div.group-cards article.card div.card__footer div.socials svg {
+main section.section-team div.control-group div.group-cards article.card div.card__footer div.socials a {
+  transition: var(--transition-150ms);
+}
+main section.section-team div.control-group div.group-cards article.card div.card__footer div.socials a:hover {
+  transform: translateY(-2px);
+}
+main section.section-team div.control-group div.group-cards article.card div.card__footer div.socials a svg {
   height: 1em;
   aspect-ratio: 1;
   fill: var(--Colour-font-accent);
@@ -755,6 +773,10 @@ main section.section-book-online div.control-group button.button--action {
   background-color: var(--Colour-font-accent);
   align-self: center;
   padding: var(--vspace-3) var(--vspace-2);
+  transition: var(--transition-150ms);
+}
+main section.section-book-online div.control-group button.button--action:hover {
+  transform: translateY(-2px);
 }
 main section.section-book-online img.image--background {
   position: absolute;

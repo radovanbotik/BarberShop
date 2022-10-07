@@ -305,6 +305,9 @@ main {
         appearance: none;
         grid-area: a;
       }
+      button.button-toggle:hover {
+        color: var(--Colour-font-main);
+      }
 
       button.button-toggle__sidebar {
         //   color: red;
@@ -314,7 +317,6 @@ main {
         }
       }
       button.button-toggle__navigation {
-        //   color: blue;
         display: grid;
         @include desktop() {
           display: none;
@@ -331,6 +333,9 @@ main {
           margin: 0;
           text-transform: uppercase;
         }
+      }
+      a.link-logo:hover {
+        color: var(--Colour-font-main);
       }
     }
     ul.list-dropdown {
@@ -367,6 +372,9 @@ main {
             display: none;
           }
         }
+      }
+      li:hover {
+        color: var(--Colour-font-main);
       }
       li.list-item-active {
         position: relative;
@@ -408,6 +416,9 @@ main {
         &__next {
           right: 0;
         }
+      }
+      button.button:hover {
+        color: var(--Colour-font-main);
       }
     }
   }
@@ -803,10 +814,16 @@ main {
               justify-content: center;
               align-items: center;
               gap: var(--vspace-2);
-              svg {
-                height: 1em;
-                aspect-ratio: 1;
-                fill: var(--Colour-font-accent);
+              a {
+                transition: var(--transition-150ms);
+                &:hover {
+                  transform: translateY(-2px);
+                }
+                svg {
+                  height: 1em;
+                  aspect-ratio: 1;
+                  fill: var(--Colour-font-accent);
+                }
               }
             }
           }
@@ -848,6 +865,10 @@ main {
         background-color: var(--Colour-font-accent);
         align-self: center;
         padding: var(--vspace-3) var(--vspace-2);
+        transition: var(--transition-150ms);
+        &:hover {
+          transform: translateY(-2px);
+        }
       }
     }
     img.image--background {
