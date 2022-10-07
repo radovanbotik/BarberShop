@@ -8,18 +8,21 @@ const fetchData = async () => {
   return data;
 };
 
-const createSocialsList = async () => {
+const SocialMediaComponent = async () => {
   const socialMedia = await fetchData();
   const socialMediaDOM = socialMedia
     .map(entry => {
       return `
-    <li>
-    <span class="icon">
-    <object type='image/svg+xml' data='${entry.icon}' class='icon'>
-    </object>
-    </span>
-    <span>${entry.platform}</span>
-  </li>
+      <li>
+      <span class="icon">
+        <svg>
+          <use
+            href="${entry.icon}"
+          ></use>
+        </svg>
+      </span>
+      <span>${entry.platform}</span>
+    </li>
     `;
     })
     .join("");
@@ -29,4 +32,4 @@ const createSocialsList = async () => {
   });
 };
 
-export { createSocialsList };
+export { SocialMediaComponent };

@@ -898,9 +898,7 @@ aside.sidebar {
             svg {
               width: 100%;
               height: 100%;
-              path {
-                fill: var(--Colour-font-main);
-              }
+              fill: var(--Colour-font-main);
             }
           }
           span.hours,
@@ -966,14 +964,13 @@ footer {
           span.icon {
             // color: var(--Colour-font-main);
             color: var(--Colour-font-accent);
+
             width: 1em;
             height: 1em;
             svg {
               width: 100%;
               height: 100%;
-              path {
-                fill: var(--Colour-font-main);
-              }
+              fill: var(--Colour-font-main);
             }
           }
           span.hours,
