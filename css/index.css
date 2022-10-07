@@ -753,7 +753,7 @@ main section.section-book-online div.control-group {
 }
 main section.section-book-online div.control-group div.image-container {
   margin: 0 auto;
-  width: 240px;
+  max-width: 240px;
   aspect-ratio: 1;
 }
 main section.section-book-online div.control-group div.image-container img.image--product {
@@ -883,13 +883,13 @@ footer div.control-group article.column ul li span.icon {
   height: 1em;
 }
 footer div.control-group article.column ul li span.icon svg {
-  width: 100%;
-  height: 100%;
+  width: 1em;
+  height: 1em;
   fill: var(--Colour-font-main);
 }
 footer div.control-group article.column ul li span.hours,
 footer div.control-group article.column ul li sup.hours {
-  width: 20ch;
+  max-width: 20ch;
   margin: 0;
 }
 footer div.control-group article.column h2 {
