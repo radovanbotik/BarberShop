@@ -1,0 +1,37 @@
+[
+  {
+    "service": "classic haircut",
+    "price": "20",
+    "details": "basic cut with a sideburn trim and a few razor trims"
+  },
+  {
+    "service": "fade haircut",
+    "price": "25",
+    "details": "fade haircut for that hyper-masculine look or style."
+  },
+  {
+    "service": "beard grooming",
+    "price": "15",
+    "details": "beard trimming isn’t anything new, but a trip to the barbershop may not be enough without it."
+  },
+  {
+    "service": "straight razor shave",
+    "price": "15",
+    "details": "straight razor shave to for an affordable price."
+  },
+  {
+    "service": "colours and treatment",
+    "price": "40",
+    "details": "what better way to relax and enjoy your time than by getting a new hair colour, a retouch, or a treatment for smoother and silkier locks? "
+  },
+  {
+    "service": "kid’s haircut",
+    "price": "15",
+    "details": "however, some shops offer haircuts for kids, regardless of the children’s ages."
+  },
+  {
+    "service": "haircut consultation",
+    "price": "10",
+    "details": "Through a consultation, barbers can ask their clients about their goals and preferences to develop a hairstyle or look to make them appear better overall."
+  }
+]
