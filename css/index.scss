@@ -759,9 +759,11 @@ main {
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
         gap: var(--vspace-0);
         article.card {
-          display: flex;
-          flex-direction: column;
+          // display: flex;
+          // flex-direction: column;
+          display: grid;
           text-align: center;
+          grid-template-rows: 1fr min-content minmax(min-content, 150px) min-content;
 
           img.card__image {
             width: 100%;
@@ -804,9 +806,7 @@ main {
               svg {
                 height: 1em;
                 aspect-ratio: 1;
-                path {
-                  fill: var(--Colour-font-accent);
-                }
+                fill: var(--Colour-font-accent);
               }
             }
           }

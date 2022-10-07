@@ -1,0 +1,63 @@
+[
+  {
+    "employee": "derek zoolander",
+    "occupation": "barber & stylist",
+    "summary": "Derek was in elementary school, being pleased with seeing his reflection on a spoon inspired him to make a career of it.",
+    "socials": [
+      {
+        "platform": "instagram",
+        "link": "www.instagram.com",
+        "icon": "./assets/icons/instagram.svg#icon--instagram"
+      },
+      {
+        "platform": "messenger",
+        "link": "www.messenger.com",
+        "icon": "./assets/icons/messenger.svg#icon--messenger"
+      },
+      {
+        "platform": "twitter",
+        "link": "www.twitter.com",
+        "icon": "./assets/icons/twitter.svg#icon--twitter"
+      }
+    ]
+  },
+  {
+    "employee": "hansel mcdonald",
+    "occupation": "barber & stylist",
+    "summary": "Hansel McDonald was the rival of Derek Zoolander and became close allies. Later in life, he is actually the son of the rock singer Sting.",
+    "socials": [
+      {
+        "platform": "instagram",
+        "link": "www.instagram.com",
+        "icon": "./assets/icons/instagram.svg#icon--instagram"
+      },
+      {
+        "platform": "messenger",
+        "link": "www.messenger.com",
+        "icon": "./assets/icons/messenger.svg#icon--messenger"
+      },
+      {
+        "platform": "facebook",
+        "link": "www.facebook.com",
+        "icon": "./assets/icons/facebook.svg#icon--facebook"
+      }
+    ]
+  },
+  {
+    "employee": "jacobim mugatu",
+    "occupation": "barber & stylist",
+    "summary": "Jacobim Mugatu was a faux-fashion model, the main antagonist of Zoolander. Obey my dog!",
+    "socials": [
+      {
+        "platform": "instagram",
+        "link": "www.instagram.com",
+        "icon": "./assets/icons/instagram.svg#icon--instagram"
+      },
+      {
+        "platform": "twitter",
+        "link": "www.twitter.com",
+        "icon": "./assets/icons/twitter.svg#icon--twitter"
+      }
+    ]
+  }
+]

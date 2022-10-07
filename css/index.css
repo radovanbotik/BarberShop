@@ -672,9 +672,10 @@ main section.section-team div.control-group div.group-cards {
   gap: var(--vspace-0);
 }
 main section.section-team div.control-group div.group-cards article.card {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   text-align: center;
+  grid-template-rows: 1fr -webkit-min-content minmax(-webkit-min-content, 150px) -webkit-min-content;
+  grid-template-rows: 1fr min-content minmax(min-content, 150px) min-content;
 }
 main section.section-team div.control-group div.group-cards article.card img.card__image {
   width: 100%;
@@ -716,8 +717,6 @@ main section.section-team div.control-group div.group-cards article.card div.car
 main section.section-team div.control-group div.group-cards article.card div.card__footer div.socials svg {
   height: 1em;
   aspect-ratio: 1;
-}
-main section.section-team div.control-group div.group-cards article.card div.card__footer div.socials svg path {
   fill: var(--Colour-font-accent);
 }
 main section.section-book-online {

@@ -26,7 +26,6 @@ const SocialMediaComponent = async () => {
     `;
     })
     .join("");
-  console.log(socialMediaDOM);
   socialMediaLists.forEach(list => {
     list.innerHTML = socialMediaDOM;
   });
